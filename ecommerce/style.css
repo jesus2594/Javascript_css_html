@@ -657,8 +657,10 @@ footer .copyright{
 
 
 /* Blog Page */
-#page-header .blog-header {
+#page-header.blog-header {
     background-image: url('img/banner/b19.jpg');
+
+    
 }
 
 #blog{
@@ -729,6 +731,45 @@ footer .copyright{
     color: #c9cbce;
     z-index: -9;
 
+}
+
+/* About page */
+#page-header.about-header{
+    background-image: url("img/about/banner.png");    
+}
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head div {
+    padding-left: 40px;
+}
+
+#about-head div {
+    padding-left: 40px;
+}
+
+#about-app{
+    text-align: center;
+}
+
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 
@@ -936,6 +977,28 @@ footer .copyright{
     #blog .blog-details {
         width: 100%;
     }
+
+    /* About Page */
+    #about-head {
+        flex-direction: column; 
+    }
+
+    #about-head img{
+        width: 100%;  
+        margin-bottom: 20px;
+    }
+
+    #about-head div{
+        padding-left: 0;
+    }
+
+    #about-app .video{
+        width: 100%;
+        height: 100%;
+        margin: 30px auto 0 auto;
+    }
+
+
 
 }
 
