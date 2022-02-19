@@ -46,7 +46,7 @@ function pauseSong(){
 }
 
 //previous song
-function preSong() {
+function prevSong() {
     songIndex--;
 
     if(songIndex < 0) {
@@ -122,7 +122,7 @@ function DurTime (e) {
     currTime.innerHTML = min +':'+sec;
 
     //define minutes duration
-    let min_d = (isNaN(duration) === true)? '0';
+    let min_d = (isNaN(duration) === true)? '0':
         Math.floor(duration/60);
     min_d = min_d <10 ? '0'+min_d:min_d;
 
@@ -147,4 +147,31 @@ function DurTime (e) {
 
     //change duration DOM
     durTime.innerHTML = min_d +':'+sec_d;
-}
+};
+
+//event listeners
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play');
+
+    if(isPlaying) {
+        pauseSong();
+    }else {
+        playSong();
+    }
+});
+
+//Change song
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+
+//Time/song update
+audio.addEventListener('timeupdate', updateProgress);
+
+//Click on progress bar
+progressContainer.addEventListener('click', setProgress);
+
+//songs ends
+audio.addEventListener('ended', nextSong);
+
+//time of song
+audio.addEventListener('timeupdate', DurTime)
