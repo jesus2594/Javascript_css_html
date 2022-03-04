@@ -75,3 +75,10 @@ document.body.addEventListener('click', e => {
         window.location.reload()
     }
 })
+
+ReactDom.render(
+<ul>
+    <li></li>
+    <li></li>
+</ul>, 
+document.getElementById('root'))
