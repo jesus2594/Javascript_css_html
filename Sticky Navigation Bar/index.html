@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sticky Navigation Bar</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#">LogoWord</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home"></section>
+    <div class="text">
+        <p><h2>Sticky Navigation Bar</h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur aliquam tenetur accusamus ex necessitatibus deserunt cupiditate obcaecati nam sit ipsam. Fugit veritatis cum vel quasi, odit velit cumque debitis corporis voluptas quis sed non quae maxime saepe quod reprehenderit et tempore nisi culpa, perspiciatis, dolorem ex repellendus aliquam. Inventore atque cum consectetur praesentium consequatur sint vero illum delectus tenetur ducimus officiis fuga maxime illo reiciendis porro facilis fugit voluptatem quis repellat eaque, quia doloremque suscipit reprehenderit. Similique suscipit quia harum eligendi labore magnam officia veniam, consequuntur nisi nesciunt! Debitis ullam quae quam! Sapiente quos delectus amet culpa consequatur in tempore, nemo deleniti fuga libero itaque cum aut unde corporis, voluptates adipisci odit impedit, asperiores earum dignissimos ipsam error. Iste, reiciendis voluptatum quis nihil ut, ad quo dolorem ratione aliquam vero quisquam repellendus tempora ipsum doloribus atque repellat! Beatae accusamus natus laboriosam cumque ipsa incidunt ut odio harum fugiat? Enim id nostrum eveniet excepturi quis, expedita quidem praesentium recusandae sequi ex non voluptas illo dignissimos! Unde in ex voluptatem, eligendi neque placeat minus facere debitis, et ipsum modi sint adipisci maxime incidunt dicta tempora sit aliquam corporis doloribus a ullam illo voluptas explicabo. Ex facere quibusdam nesciunt molestiae ipsum incidunt natus eum suscipit quas at, reiciendis fuga non omnis tempore unde ipsam est, vitae amet possimus quod commodi! Praesentium quae enim incidunt ab perspiciatis nesciunt ducimus vero ex omnis iste dolores fugit obcaecati iusto soluta architecto at, reiciendis, amet deleniti consequatur laborum. Vel quia aliquid odit beatae quo nisi suscipit eos id non. Minima officia deserunt placeat cum architecto debitis consectetur provident delectus, ducimus aliquid odio nisi accusantium, ipsam iste ipsum alias eius iusto. Cumque quibusdam fuga at! Eos nesciunt necessitatibus, commodi eum excepturi maxime praesentium fugit officia ut nobis placeat porro quis vel nihil, error unde voluptate, autem velit ex!</p>
+    </div>
+    <script>
+        let nav = document.querySelector('nav')
+        window.addEventListener('scroll', ()=>{
+            if(document.documentElement.scrollTop > 20){
+                nav.classList.add('sticky')
+            }else {
+                nav.classList.remove('sticky')
+            }
+        })
+    </script>
+</body>
+</html>
